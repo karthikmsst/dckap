@@ -150,7 +150,7 @@ class Welcome extends CI_Controller {
 			exit;
 		}
 		
-		$this->session->set_userdata('page', 2);
+		$this->session->set_userdata('page', 2);		
 		
 		$data                       = array();
 		$msg                        = '';
@@ -202,6 +202,8 @@ class Welcome extends CI_Controller {
 							
 							$result_customer_order_items					= $this->customer_orders_model->insert_customer_order_items($customer_order_items_data);
 						}
+						
+						$this->session->set_flashdata('order_msg', 'Your order placed successfully');
 						
 						$this->cart->destroy();
 						redirect('welcome/index');

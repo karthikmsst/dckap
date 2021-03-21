@@ -9,7 +9,7 @@
                     <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Sub Total</th>
+                    <th>Sub Total ( INR )</th>
                     <th>&nbsp;</th>
                 </tr>
             </thead>
@@ -22,7 +22,7 @@
                     <td align="left"><?php echo $val_cart_data['name']; ?></td>
                     <td align="left"><?php echo number_format($val_cart_data['price']); ?></td>
                     <td align="left"><input type="text" name="quantity" id="quantity" class="update_quantity" data-pro_id="<?php echo $key_cart_data; ?>" value="<?php echo $val_cart_data['qty']; ?>"></td>
-                    <td align="left"><?php echo number_format($val_cart_data['subtotal']); ?></td>
+                    <td align="left">Rs <?php echo number_format($val_cart_data['subtotal']); ?></td>
                     <td align="left"><button type="button" id="<?php echo $key_cart_data; ?>" class="remove_cart btn btn-danger btn-sm">Delete</button></td>
                 </tr>
                 <?php
@@ -31,7 +31,7 @@
                 <tr>
                     <td colspan="2">&nbsp;</td>
                     <td align="left"><strong>Total ( INR ) :</strong></td>
-                    <td align="left"><?php echo $CI->cart->format_number($CI->cart->total()); ?></td>
+                    <td align="left">Rs <?php echo $CI->cart->format_number($CI->cart->total()); ?></td>
                     <td>&nbsp;</td>
                 </tr>
                 

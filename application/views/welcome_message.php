@@ -1,6 +1,10 @@
+<?php $CI =& get_instance(); ?>
+<?php if($this->session->flashdata('order_msg')){ ?>
+<div class="col-md-12" style="color:green;" align="center"><strong><?php echo $this->session->flashdata('order_msg'); ?></strong></div>
+<?php } ?>
+
 <div class="col-md-12"><div class="shopping-cart"></div></div>
 <div class="col-md-12"><h2>List Products</h2></div>
-<?php $CI =& get_instance(); ?>
 <?php if(count($result_products) > 0){ ?>
 	<?php foreach($result_products as $val_result_products){ ?>
 	<div class="col-md-4">

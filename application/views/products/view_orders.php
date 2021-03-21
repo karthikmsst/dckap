@@ -7,7 +7,7 @@
     <td align="center"><a href="<?php echo base_url('products/manage_orders'); ?>">Back</a></td>
 </tr>
 <tr>
-    <td valign="top" valign="top" align="left" width="80%">
+    <td valign="top" valign="top" align="left" width="70%">
         <table cellpadding="3" cellspacing="3" width="100%">
         <tr>
             <td align="left" width="20%"><strong>Name</strong></td>
@@ -27,7 +27,7 @@
         </tr>
         </table>
     </td>
-    <td valign="top" valign="top" align="left" width="20%">
+    <td valign="top" valign="top" align="left" width="30%">
         <table cellpadding="3" cellspacing="3" width="100%">
         <tr>
             <td align="left"><strong>Date</strong></td>
@@ -63,7 +63,7 @@
             </td>
             <td align="left"><?php echo $val_result_customer_order_items['item_qty']; ?></td>
             <td align="left"><?php echo $val_result_customer_order_items['item_price']; ?></td>
-            <td align="left"><?php echo $val_result_customer_order_items['item_total']; ?></td>
+            <td align="left">Rs <?php echo $val_result_customer_order_items['item_total']; ?></td>
         </tr>
         <?php
             $i++;
@@ -72,8 +72,7 @@
         <tr>
             <td colspan="3">&nbsp;</td>
             <td align="left"><strong>Total ( INR ) :</strong></td>
-            <td align="left"><?php echo number_format($result_customer_orders[0]['main_total']); ?></td>
-            <td>&nbsp;</td>
+            <td align="left">Rs <?php echo number_format($result_customer_orders[0]['main_total']); ?></td>
         </tr>                
         <?php
         }
